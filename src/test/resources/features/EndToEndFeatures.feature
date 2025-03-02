@@ -3,7 +3,7 @@ Feature: Verify end to end features
   Scenario: Very various request methods
     Given user sets endpoint "/objects"
     And sets header "Content-Type" as "application/json"
-    When user sets request body from "create-request.json"
+    When user sets request body from "create-request.json" as pojo
     And performs post call
     Then verify status code is 200
     When user sets endpoint "/objects/@id"
